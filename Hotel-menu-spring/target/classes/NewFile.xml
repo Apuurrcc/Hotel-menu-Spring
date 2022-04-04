@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:util="http://www.springframework.org/schema/util"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd
+           http://www.springframework.org/schema/util 
+           http://www.springframework.org/schema/util/spring-util.xsd">
+
+	<util:map id="id" map-class="java.util.HashMap">
+    
+    <entry key="idli" value="100"/>
+    <entry key="dosa" value="110"/>
+    <entry key="Vada" value="400"/>
+    <entry key="Lemon Rice" value="89"/>
+    <entry key="Tea" value="70"/>
+    <entry key="Samosa" value="50"/>
+    
+</util:map>
+
+<bean class="com.example.demo.Menu" name="mens">
+    <property name="menu" ref="id">
+    </property>
+</bean>
+
+
+</beans>
